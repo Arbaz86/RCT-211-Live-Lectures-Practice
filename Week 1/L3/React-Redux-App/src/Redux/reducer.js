@@ -22,6 +22,7 @@ export const reducer = (state = initState, action) => {
 
     case types.GET_TODO_FAILURE:
       return { ...state, isLoading: false, isError: payload };
+
     case types.ADD_TODO_REQUEST:
       return { ...state, isLoading: true, isError: false };
     case types.ADD_TODO_SUCCESS:
