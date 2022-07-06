@@ -1,0 +1,19 @@
+{
+  "todos": [
+    {
+      "id": 1,
+      "title": "Learn Redux Thunk",
+      "status": false
+    },
+    {
+      "title": "Learn Redux",
+      "state": false,
+      "id": 2
+    },
+    {
+      "title": "added new todo",
+      "state": false,
+      "id": 3
+    }
+  ]
+}
