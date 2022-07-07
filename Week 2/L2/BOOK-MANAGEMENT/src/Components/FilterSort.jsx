@@ -8,9 +8,9 @@ export const FilterSort = () => {
 
   const [searchParams, setSearchParams] = useSearchParams();
   const urlCategory = searchParams.getAll("category");
-  const urlSort = searchParams.getAll("sortBy");
+  const urlSortBy = searchParams.getAll("sortBy");
   const [category, setCategory] = useState(urlCategory || []);
-  const [sortBy, setSortBy] = useState(urlSort[0] || "");
+  const [sortBy, setSortBy] = useState(urlSortBy[0] || "");
 
   const handleCheckbox = (e) => {
     const option = e.target.value;

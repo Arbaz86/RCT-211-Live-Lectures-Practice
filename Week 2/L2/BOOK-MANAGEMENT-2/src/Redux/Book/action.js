@@ -1,10 +1,10 @@
 import * as types from "./actionTypes";
 import axios from "axios";
-export const getBooks = () => (dispatch) => {
+export const getBooks = (params) => (dispatch) => {
   dispatch({ type: types.GET_BOOKS_REQUEST });
 
   axios
-    .get("/books")
+    .get("/books", params)
     .then(({ data }) => {
       dispatch({ type: types.GET_BOOKS_SUCCESS, payload: data });
     })
