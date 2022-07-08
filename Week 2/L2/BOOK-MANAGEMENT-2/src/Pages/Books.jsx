@@ -1,19 +1,9 @@
-import React, { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import React from "react";
 import { BookLists } from "../Components/BookLists";
 import { FilterSort } from "../Components/FilterSort";
-import { getBooks } from "../Redux/Book/action";
 import styled from "styled-components";
 
 export const Books = () => {
-  const dispatch = useDispatch();
-  const books = useSelector((state) => state.books);
-  console.log(books);
-
-  useEffect(() => {
-    dispatch(getBooks());
-  }, []);
-
   return (
     <div>
       <h2 style={{ textAlign: "center" }}>Books</h2>
@@ -22,7 +12,7 @@ export const Books = () => {
           <FilterSort />
         </FilterSortWrapper>
         <BookListsWrapper>
-          <BookLists books={books} />
+          <BookLists />
         </BookListsWrapper>
       </BookPageWrapper>
     </div>

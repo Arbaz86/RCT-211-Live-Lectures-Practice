@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
-import { useSearchParams } from "react-router-dom";
-import { getBooks } from "../Redux/Book/action";
+import { useLocation, useSearchParams } from "react-router-dom";
+import { getBooks } from "../Redux/AppReducer/action";
 
 export const FilterSort = () => {
   const dispatch = useDispatch();
@@ -11,6 +11,7 @@ export const FilterSort = () => {
   const urlSortBy = searchParams.getAll("sortBy");
   const [category, setCategory] = useState(urlCategory || []);
   const [sortBy, setSortBy] = useState(urlSortBy[0] || "");
+  const location = useLocation();
 
   const handleCheckbox = (e) => {
     const option = e.target.value;
@@ -33,32 +34,15 @@ export const FilterSort = () => {
   };
 
   useEffect(() => {
-    if (category) {
-      setSearchParams({ category: category });
-      dispatch(getBooks({ params: { category } }));
-    }
-  }, [category, dispatch, setSearchParams]);
-
-  useEffect(() => {
-    if (sortBy) {
-      const params = {
-        category: searchParams.getAll("category"),
-        sortBy,
-      };
-
-      const getBooksParams = {
-        params: {
-          category: searchParams.getAll("category"),
-          _sort: "release_year",
-          _order: sortBy,
-        },
-      };
-
-      dispatch(getBooks(getBooksParams));
-
+    if (category || sortBy) {
+      let params = {};
+      category && (params.category = category);
+      sortBy && (params.sortBy = sortBy);
       setSearchParams(params);
+
+      // dispatch(getBooks({ params: { category } }));
     }
-  }, [sortBy, dispatch, setSearchParams]);
+  }, [category, dispatch, setSearchParams, location.search, sortBy]);
 
   return (
     <div>
@@ -106,9 +90,19 @@ export const FilterSort = () => {
         onChange={handleSortBy}
         checked={sortBy === "desc" || sortBy === "asc"}
       >
-        <input type="radio" name="sortBy" value="asc" />
+        <input
+          type="radio"
+          name="sortBy"
+          value="asc"
+          defaultChecked={sortBy === "asc"}
+        />
         <label>Ascending</label>
-        <input type="radio" name="sortBy" value="desc" />
+        <input
+          type="radio"
+          name="sortBy"
+          value="desc"
+          defaultChecked={sortBy === "desc"}
+        />
         <label>Descending</label>
       </div>
     </div>
