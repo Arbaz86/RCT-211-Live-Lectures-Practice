@@ -1,11 +1,15 @@
 import * as types from "./actionTypes";
-import axios from "./axios";
+import axios from "axios";
 
-const login = (payload) => (dispatch) => {
+export const login = (payload) => (dispatch) => {
   dispatch({ type: types.USER_LOGIN_REQUEST });
 
-  axios
-    .post("/api/login", payload)
+  return axios({
+    method: "POST",
+    url: "/api/login",
+    baseURL: "https://reqres.in",
+    data: payload,
+  })
     .then(({ data }) => {
       dispatch({ type: types.USER_LOGIN_SUCCESS, payload: data });
     })
