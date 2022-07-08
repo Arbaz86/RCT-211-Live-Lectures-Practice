@@ -37,7 +37,7 @@ export const FilterSort = () => {
       setSearchParams({ category: category });
       dispatch(getBooks({ params: { category } }));
     }
-  }, [category, dispatch, setSearchParams]);
+  }, [category, dispatch, setSearchParams, searchParams]);
 
   useEffect(() => {
     if (sortBy) {
@@ -60,7 +60,7 @@ export const FilterSort = () => {
 
       setSearchParams(params);
     }
-  }, [sortBy, dispatch, setSearchParams]);
+  }, [sortBy, dispatch, setSearchParams, searchParams]);
 
   console.log(category);
 
