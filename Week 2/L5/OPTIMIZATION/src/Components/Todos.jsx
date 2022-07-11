@@ -30,18 +30,17 @@ export const Todos = () => {
 
   //todo status toggle function
   const handleToggle = useCallback((id) => {
-    let newTodoList = todos.map((item) =>
-      item.id === id ? { ...item, status: !item.status } : item
+    setTodos((prev) =>
+      prev.map((item) =>
+        item.id === id ? { ...item, status: !item.status } : item
+      )
     );
-
-    setTodos(newTodoList);
-  });
+  }, []);
 
   //todo deletion function
   const handleDelete = useCallback((id) => {
-    let newTodoList = todos.filter((item) => item.id !== id);
-    setTodos(newTodoList);
-  });
+    setTodos((prev) => prev.filter((item) => item.id !== id));
+  }, []);
 
   return (
     <div>
