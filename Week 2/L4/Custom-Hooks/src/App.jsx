@@ -1,13 +1,16 @@
 import "./App.css";
-import { useTimeout } from "./Hooks/useTimeout";
+import { useFetch } from "./Hooks/useFetch";
 
 function App() {
-  const ready = useTimeout();
+  const { data, loading, error } = useFetch(
+    "https://api.github.com/search/users?q=masai"
+  );
 
   return (
     <div className="App">
-      <h3>Timeout</h3>
-      <div>{ready ? "ready" : "not ready"}</div>
+      {loading && "loading..."}
+      {data.length > 0 &&
+        data.map((item) => <div key={item.id}>{item.login}</div>)}
     </div>
   );
 }
