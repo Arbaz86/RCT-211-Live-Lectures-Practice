@@ -1,0 +1,19 @@
+{
+  "todos": [
+    {
+      "title": "json-server",
+      "status": "Learn TypeScript",
+      "id": 1
+    },
+    {
+      "title": "fdsf",
+      "status": false,
+      "id": 2
+    },
+    {
+      "title": "Learn Javascript",
+      "status": false,
+      "id": 3
+    }
+  ]
+}
