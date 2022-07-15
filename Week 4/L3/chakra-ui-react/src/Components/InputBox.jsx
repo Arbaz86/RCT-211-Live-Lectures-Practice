@@ -1,13 +1,19 @@
 import { Box, Button, Heading, Input, Link, Flex } from "@chakra-ui/react";
 import { BsCode } from "react-icons/bs";
 import React from "react";
+import { TbFilter } from "react-icons/tb";
+import { AiOutlineRise } from "react-icons/ai";
+import { Icon } from "@chakra-ui/react";
 
 export const InputBox = () => {
   return (
     <Box p="80px 0px 50px">
       <Box textAlign="center">
         <Heading fontSize="60px">Find The Right</Heading>
-        <Heading fontSize="60px"> Four-Day Week Job</Heading>
+        <Heading fontSize="60px">
+          <span className="heading-textGradian">Four-Day </span>
+          Week Job
+        </Heading>
       </Box>
       <Box align="center" mt="43px">
         <Input
@@ -21,7 +27,6 @@ export const InputBox = () => {
           bg="white"
         />
         <Button
-          color="#a0aec0"
           ml="12px"
           p="0px 16px"
           h="50px"
@@ -29,7 +34,7 @@ export const InputBox = () => {
           rounded="xl"
           fontSize="16px"
         >
-          b
+          <Icon as={TbFilter} fontSize="21px" color="#a0aec0" />
         </Button>
       </Box>
       <Box mt="12px">
@@ -74,9 +79,14 @@ export const InputBox = () => {
             w="154px"
             p="8px"
             bg="#805ad5"
+            display="flex"
+            justifyContent="center"
+            alignItems="center"
+            gap="3px"
             rounded="lg"
             _active={{ backgroundColor: "#53329ae1" }}
           >
+            <AiOutlineRise fontSize="22px" color="#ed8936" />
             Marketing
           </Link>
         </Flex>

@@ -3,6 +3,7 @@ import { Box, Heading } from "@chakra-ui/react";
 import { Navbar } from "./Components/Navbar";
 import { InputBox } from "./Components/InputBox";
 import { JobCover } from "./Components/JobCover";
+import { Footer } from "./Components/Footer";
 
 function App() {
   const jobData = [
@@ -14,8 +15,8 @@ function App() {
       jobTitle: "Lead Producer",
       salary: "£40k - £50k",
       hotIcon: "AiTwotoneFire",
-      earthIcon: "",
-      pinIcon: "",
+      earthIcon: "IoEarthSharp",
+      pinIcon: "AiFillPushpin",
       bookmarkIcon: "BsFillBookmarkFill",
       jobTime: "Full-Time",
     },
@@ -27,7 +28,7 @@ function App() {
       jobTitle: "Lead Game Developer",
       salary: "£40k - £50k",
       hotIcon: "AiTwotoneFire",
-      earthIcon: "",
+      earthIcon: "IoEarthSharp",
       pinIcon: "",
       bookmarkIcon: "BsFillBookmarkFill",
       jobTime: "Full-Time",
@@ -40,7 +41,7 @@ function App() {
       jobTitle: "Full-Stack JavaScript Developer",
       salary: "£50k - £68k",
       hotIcon: "AiTwotoneFire",
-      earthIcon: "",
+      earthIcon: "IoEarthSharp",
       pinIcon: "",
       bookmarkIcon: "BsFillBookmarkFill",
       jobTime: "Full-Time",
@@ -53,8 +54,8 @@ function App() {
       jobTitle: "Director of Marketing",
       salary: "$150k",
       hotIcon: "AiTwotoneFire",
-      earthIcon: "",
-      pinIcon: "",
+      earthIcon: "IoEarthSharp",
+      pinIcon: "AiFillPushpin",
       bookmarkIcon: "BsFillBookmarkFill",
       jobTime: "Full-Time",
     },
@@ -66,9 +67,9 @@ function App() {
       jobTitle: "Senior Software Engineer (.NET)",
       salary: "$70k",
       hotIcon: "",
-      earthIcon: "",
-      pinIcon: "",
-      bookmarkIcon: "BsFillBookmarkFill",
+      earthIcon: "IoEarthSharp",
+      pinIcon: "AiFillPushpin",
+      bookmarkIcon: "",
       jobTime: "Full-Time",
     },
     {
@@ -92,8 +93,8 @@ function App() {
       jobTitle: "Development Database Assistant",
       salary: "$60k",
       hotIcon: "AiTwotoneFire",
-      earthIcon: "",
-      pinIcon: "",
+      earthIcon: "IoEarthSharp",
+      pinIcon: "AiFillPushpin",
       bookmarkIcon: "BsFillBookmarkFill",
       jobTime: "Full-Time",
     },
@@ -105,8 +106,8 @@ function App() {
       jobTitle: "Content Specialist",
       salary: "$36k",
       hotIcon: "",
-      earthIcon: "",
-      pinIcon: "",
+      earthIcon: "IoEarthSharp",
+      pinIcon: "AiFillPushpin",
       bookmarkIcon: "BsFillBookmarkFill",
       jobTime: "Full-Time",
     },
@@ -118,8 +119,8 @@ function App() {
       jobTitle: "Customer Acquisition Manager",
       salary: "£50k - £68k",
       hotIcon: "",
-      earthIcon: "",
-      pinIcon: "",
+      earthIcon: "IoEarthSharp",
+      pinIcon: "AiFillPushpin",
       bookmarkIcon: "BsFillBookmarkFill",
       jobTime: "Full-Time",
     },
@@ -132,8 +133,8 @@ function App() {
       salary: "£40k - £50k",
       hotIcon: "AiTwotoneFire",
       earthIcon: "",
-      pinIcon: "",
-      bookmarkIcon: "BsFillBookmarkFill",
+      pinIcon: "AiFillPushpin",
+      bookmarkIcon: "",
       jobTime: "Full-Time",
     },
     {
@@ -144,9 +145,9 @@ function App() {
       jobTitle: "Lead Producer",
       salary: "£40k - £50k",
       hotIcon: "",
-      earthIcon: "",
-      pinIcon: "",
-      bookmarkIcon: "BsFillBookmarkFill",
+      earthIcon: "IoEarthSharp",
+      pinIcon: "AiFillPushpin",
+      bookmarkIcon: "",
       jobTime: "Full-Time",
     },
     {
@@ -157,7 +158,7 @@ function App() {
       jobTitle: "Lead Game Developer",
       salary: "£40k - £50k",
       hotIcon: "AiTwotoneFire",
-      earthIcon: "",
+      earthIcon: "IoEarthSharp",
       pinIcon: "",
       bookmarkIcon: "BsFillBookmarkFill",
       jobTime: "Full-Time",
@@ -170,8 +171,8 @@ function App() {
       jobTitle: "Full-Stack JavaScript Developer",
       salary: "£50k - £68k",
       hotIcon: "AiTwotoneFire",
-      earthIcon: "",
-      pinIcon: "",
+      earthIcon: "IoEarthSharp",
+      pinIcon: "AiFillPushpin",
       bookmarkIcon: "BsFillBookmarkFill",
       jobTime: "Full-Time",
     },
@@ -183,8 +184,8 @@ function App() {
       jobTitle: "Director of Marketing",
       salary: "$150k",
       hotIcon: "AiTwotoneFire",
-      earthIcon: "",
-      pinIcon: "",
+      earthIcon: "IoEarthSharp",
+      pinIcon: "AiFillPushpin",
       bookmarkIcon: "BsFillBookmarkFill",
       jobTime: "Full-Time",
     },
@@ -196,9 +197,9 @@ function App() {
       jobTitle: "Senior Software Engineer (.NET)",
       salary: "$70k",
       hotIcon: "AiTwotoneFire",
-      earthIcon: "",
-      pinIcon: "",
-      bookmarkIcon: "BsFillBookmarkFill",
+      earthIcon: "IoEarthSharp",
+      pinIcon: "AiFillPushpin",
+      bookmarkIcon: "",
       jobTime: "Full-Time",
     },
     {
@@ -209,8 +210,8 @@ function App() {
       jobTitle: "Account Executive",
       salary: "$65k",
       hotIcon: "",
-      earthIcon: "",
-      pinIcon: "",
+      earthIcon: "IoEarthSharp",
+      pinIcon: "AiFillPushpin",
       bookmarkIcon: "BsFillBookmarkFill",
       jobTime: "Full-Time",
     },
@@ -222,8 +223,8 @@ function App() {
       jobTitle: "Development Database Assistant",
       salary: "$60k",
       hotIcon: "",
-      earthIcon: "",
-      pinIcon: "",
+      earthIcon: "IoEarthSharp",
+      pinIcon: "AiFillPushpin",
       bookmarkIcon: "BsFillBookmarkFill",
       jobTime: "Full-Time",
     },
@@ -235,9 +236,9 @@ function App() {
       jobTitle: "Content Specialist",
       salary: "$36k",
       hotIcon: "AiTwotoneFire",
-      earthIcon: "",
+      earthIcon: "IoEarthSharp",
       pinIcon: "",
-      bookmarkIcon: "BsFillBookmarkFill",
+      bookmarkIcon: "",
       jobTime: "Full-Time",
     },
     {
@@ -249,7 +250,7 @@ function App() {
       salary: "£50k - £68k",
       hotIcon: "AiTwotoneFire",
       earthIcon: "",
-      pinIcon: "",
+      pinIcon: "AiFillPushpin",
       bookmarkIcon: "BsFillBookmarkFill",
       jobTime: "Full-Time",
     },
@@ -261,7 +262,7 @@ function App() {
       jobTitle: "Software Engineer - Backend",
       salary: "£40k - £50k",
       hotIcon: "AiTwotoneFire",
-      earthIcon: "",
+      earthIcon: "IoEarthSharp",
       pinIcon: "",
       bookmarkIcon: "BsFillBookmarkFill",
       jobTime: "Full-Time",
@@ -272,8 +273,8 @@ function App() {
     <div className="App">
       <Navbar />
       <InputBox />
-      <Box bg="#edf2f7">
-        <Box pt="55px" w="34%" m="auto">
+      <Box bg="#edf2f7" pb="80px">
+        <Box pt="55px" w="640px" m="auto">
           <Heading>
             <span style={{ color: "#6b46c1" }}> Recent </span> Jobs
           </Heading>
@@ -284,6 +285,7 @@ function App() {
           ))}
         </Box>
       </Box>
+      <Footer />
     </div>
   );
 }

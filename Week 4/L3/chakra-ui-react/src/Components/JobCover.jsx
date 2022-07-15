@@ -1,10 +1,11 @@
 import { Box, Flex, Heading, Image, Text } from "@chakra-ui/react";
 import { BsFillBookmarkFill } from "react-icons/bs";
-import { AiTwotoneFire } from "react-icons/ai";
+import { IoEarthSharp } from "react-icons/io5";
+import { AiTwotoneFire, AiFillPushpin } from "react-icons/ai";
+import { Icon } from "@chakra-ui/react";
 import React from "react";
 
 export const JobCover = (props) => {
-  console.log(props.hotIcon == "AiTwotoneFire");
   return (
     <Box
       p="15px"
@@ -13,6 +14,8 @@ export const JobCover = (props) => {
       h="96px"
       rounded="xl"
       border="2px solid #6b46c1"
+      _hover={{ boxShadow: "lg" }}
+      cursor="pointer"
     >
       <Flex>
         <Box>
@@ -36,13 +39,46 @@ export const JobCover = (props) => {
             {props.salary}
           </Text>
         </Box>
-        <Box>
-          <Flex>
+        <Box w="164px" ml="10px">
+          <Flex columnGap="10px" justifyContent="flex-end">
             {props.hotIcon == "AiTwotoneFire" ? (
-              <AiTwotoneFire color="#f56565" fontSize="16px" />
+              <abbr title="Hot">
+                <Icon as={AiTwotoneFire} color="#f56565" fontSize="19px" />
+              </abbr>
             ) : (
               ""
             )}
+            {props.earthIcon === "IoEarthSharp" ? (
+              <abbr title="Remote">
+                <Icon as={IoEarthSharp} color="#119478" fontSize="19px" />
+              </abbr>
+            ) : (
+              ""
+            )}
+            {props.pinIcon === "AiFillPushpin" ? (
+              <abbr title="Pinned">
+                <Icon as={AiFillPushpin} color="#4299e1" fontSize="19px" />
+              </abbr>
+            ) : (
+              ""
+            )}
+            {props.bookmarkIcon === "BsFillBookmarkFill" ? (
+              <abbr title="Bookmark">
+                <Icon
+                  as={BsFillBookmarkFill}
+                  color="#718096"
+                  _hover={{ color: "#f687b3" }}
+                  fontSize="19px"
+                />
+              </abbr>
+            ) : (
+              ""
+            )}
+          </Flex>
+          <Flex justifyContent="flex-end" mt="25px">
+            <Text fontSize="14px" color="#4a5568">
+              {props.jobTime}
+            </Text>
           </Flex>
         </Box>
       </Flex>
