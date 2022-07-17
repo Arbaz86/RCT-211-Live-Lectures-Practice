@@ -1,0 +1,59 @@
+{
+  "tasks": [
+    {
+      "id": 1,
+      "title": "Task 1",
+      "description": "description for task 1",
+      "task_Status": "todo",
+      "tags": ["Personal", "Official"],
+      "subTasks": [
+        { "subTasksTitle": "Task 1 : sub Tasks 1", "status": true },
+        { "subTasksTitle": "Task 1 : sub Tasks 2", "status": false }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Task 2",
+      "description": "description for task 2",
+      "task_Status": "in-progress",
+      "tags": ["Official"],
+      "subTasks": [
+        { "subTasksTitle": "Task 2 : sub Tasks 1", "status": true },
+        { "subTasksTitle": "Task 2 : sub Tasks 2", "status": false }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Task 3",
+      "description": "description for task 3",
+      "task_Status": "done",
+      "tags": ["Others"],
+      "subTasks": [
+        { "subTasksTitle": "Task 3 : sub Tasks 1", "status": false },
+        { "subTasksTitle": "Task 3 : sub Tasks 2", "status": false }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Task 4",
+      "description": "description for task 4",
+      "task_Status": "todo",
+      "tags": ["Personal"],
+      "subTasks": [
+        { "subTasksTitle": "Task 4 : sub Tasks 1", "status": true },
+        { "subTasksTitle": "Task 4 : sub Tasks 2", "status": false }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Task 5",
+      "description": "description for task 5",
+      "task_Status": "todo",
+      "tags": ["Personal", "Official"],
+      "subTasks": [
+        { "subTasksTitle": "Task 5 : sub Tasks 1", "status": true },
+        { "subTasksTitle": "Task 5 : sub Tasks 2", "status": false }
+      ]
+    }
+  ]
+}
